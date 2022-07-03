@@ -1,37 +1,39 @@
 import java.util.Scanner;
-class ReplaceNumInArray{
+public  class Replace_Number_In_Array{
 	public static void main(String[] args) {
-
-		Scanner sc=new Scanner (System.in);
-		System.out.println("enter n");
-
+		Scanner sc =new Scanner(System.in);
+		// Read Array
+		System.out.print("Enter size of array : ");
 		int n=sc.nextInt();
-		System.out.println("enter n1");
-	    int n1=sc.nextInt();
-	    System.out.println("enter n2");
-         int n2=sc.nextInt();
-
-
-
-
-		int[] a=new int[n];
-		for (int i=0;i<a.length ;i++) {
-	    System.out.println("enter array elements");
-
-			a[i]=sc.nextInt();
+		int array[] = new int[n];
+		for(int i=0;i<n;i++){
+			System.out.print("Enter array element : ");
+			array[i]=sc.nextInt();
 		}
-		for (int i=0;i<a.length ;i++) {
-			System.out.println(a[i]);
-		}
-		for (int i=0;i<a.length;i++) {
-			int currentmin=a[n1	];
-			int currentminindex=i;
-		if (a[i]==n1) {
-
-			int currentmin=a[n2];
+		// Read two numbers
+		System.out.print("Enter number which will be replaced : ");
+		int a=sc.nextInt();
+		System.out.print("Enter number which will be new number : ");
+		int b=sc.nextInt();
+		System.out.println("-----------------------------------------");
+		// find and replace number
+		boolean flag=true;
+		for(int i=0;i<n;i++){
+			if(array[i]==a){
+				System.out.println("Number has found at index "+i);
+				array[i]=b;
+				flag=false;
 			}
-			
 		}
-
+		if(flag)
+			System.out.print("You number is not found");
+		// print new array
+		if(!flag){
+			System.out.println("----New Array----");
+			for(int i=0;i<n;i++){
+			System.out.println("Array element : "+array[i]);
+			}
+		}
+		
 	}
 }
