@@ -20,17 +20,16 @@ class array_replace_with_second_num{
 
 			a[i]=sc.nextInt();
 		}
-		for (int i=0;i<a.length ;i++) {
+		for (int i=0;i<a.length ;i++ ) {
+			if (a[i]==n1) {
+				a[i]=n2;
+			}
+		}
+	
+		for (int i=0;i<a.length;i++) {
+				for ( i=0;i<a.length ;i++) {
 			System.out.println(a[i]);
 		}
-		for (int i=0;i<a.length;i++) {
-			int currentmin=a[n1];
-			int currentminindex=i;
-		if (a[i]==n1) {
-
-			int currentmin=a[n2];
-			}
-			
 		}
 
 	}
